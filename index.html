@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Andres Pluska</title>
+    <meta name="description" content="Personal Homepage for Andres Pluska, WDD231 Assignment Portal">
+    <meta name="author" content="Andres Pluska">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <script type="module" src="scripts/courses.js"></script>
+    <script type="module" src="scripts/footer.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" class="logo-svg" fill="none" stroke="currentColor" stroke-width="6">
+                    <rect x="5" y="5" width="90" height="90" />
+                    <line x1="5" y1="5" x2="95" y2="95" />
+                    <line x1="95" y1="5" x2="5" y2="95" />
+                </svg>
+            </div>
+            <span class="site-title">Andres Pluska</span>
+        </div>
+
+        <!-- CSS-only mobile menu toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+        <label for="menu-toggle" class="menu-toggle-label">
+            <span class="open-icon">☰</span>
+            <span class="close-icon">✕</span>
+        </label>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="grid-container">
+            <section class="card bio-card">
+                <div class="card-header">
+                    <h2>About Me</h2>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Hello everyone, I am from Venezuela, but I am currently living in Peru.
+                        I love programming and technology, I found this passion since I was 14
+                        years old on a notepad writing "Hello World" in JavaScript. Currently I'm
+                        a full-stack developer. My goal is to pursue a degree in Software Development.
+                        I am usually at home, since I work virtually, study virtually and do
+                        almost all my activities virtually. That doesn't mean I don't enjoy going
+                        out to eat or enjoying a walk to a new place. I like to go to the gym, I
+                        consider that physical wellness is very important, as well as spiritual
+                        wellness.
+                    </p>
+                </div>
+            </section>
+
+            <section class="card photo-card">
+                <div class="card-header">
+                    <h2>Student Photo</h2>
+                </div>
+                <div class="card-content student-photo-wrapper">
+                    <img src="images/personal_photo.webp" alt="Andres Pluska Student Photo" class="student-photo">
+                </div>
+            </section>
+        </div>
+
+        <section class="card courses-card">
+            <!-- Course Filter System Using CSS radio hack -->
+            <input type="radio" name="course-filter" id="filter-all" checked class="filter-radio">
+            <input type="radio" name="course-filter" id="filter-cse" class="filter-radio">
+            <input type="radio" name="course-filter" id="filter-wdd" class="filter-radio">
+
+            <div class="card-header">
+                <h2>Web Certificate Courses</h2>
+            </div>
+            <div class="card-content">
+                <div class="course-filters">
+                    <label for="filter-all" class="filter-btn btn-all">All</label>
+                    <label for="filter-cse" class="filter-btn btn-cse">CSE</label>
+                    <label for="filter-wdd" class="filter-btn btn-wdd">WDD</label>
+                </div>
+
+                <div class="courses-grid-wrapper">
+                    <div class="courses-grid" id="courses-grid">
+
+                    </div>
+                </div>
+
+                <p class="credits-text">The total credits for course listed above is <span id="credit-count"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/andrespluska/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img class="social-icon" src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/pluska" target="_blank" rel="noopener" aria-label="GitHub">
+                <img class="social-icon" src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://twitter.com/andres_pluska" target="_blank" rel="noopener" aria-label="X">
+                <img class="social-icon" src="images/x.svg" alt="X">
+            </a>
+        </div>
+        <p class="copyright">© <span id="year"></span> • Andres Pluska • Callao, Peru</p>
+        <p class="last-modified">Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+@media screen and (min-width: 640px) {
+  /* Body margins layout */
+  body {
+    padding: 20px 24px;
+  }
+
+  /* Desktop Header Layout */
+  header {
+    display: block; /* Stack header brand content and nav vertically */
+    padding: 18px 0 0 0;
+    overflow: hidden;
+  }
+  
+  .header-container {
+    padding: 0 24px 18px 24px;
+  }
+  
+  .site-title {
+    font-size: 1.65rem;
+  }
+  
+  /* Hide Mobile Menu Toggle */
+  .menu-toggle-label {
+    display: none;
+  }
+  
+  /* Horizontal Navigation Bar */
+  .nav-menu {
+    display: block !important; /* Always visible on desktop */
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  
+  .nav-menu ul {
+    flex-direction: row; /* Align horizontal row */
+  }
+  
+  .nav-menu li {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav-menu li a {
+    padding: 14px 20px;
+    border-bottom: none;
+    border-right: 1px solid rgba(176, 228, 204, 0.15);
+  }
+  
+  .nav-menu li:last-child a {
+    border-right: none;
+  }
+  
+  .nav-menu li a.active {
+    border-left: none;
+    border-bottom: 4px solid var(--primary-light);
+  }
+
+  /* Grid Layout for Bio and Student Photo Cards */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  
+  .bio-card, .photo-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .bio-card .card-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  .photo-card .card-content {
+    flex-grow: 1;
+  }
+  
+  .student-photo-wrapper {
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .student-photo {
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* 3-Column Courses Grid Layout */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 24px;
+  }
+}
